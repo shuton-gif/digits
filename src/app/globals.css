@@ -1,47 +1,14 @@
 html,
 body {
-  --bs-dark: var(--nat-navbar-bg);
-  --bs-dark-rgb: var(--nat-navbar-bg-rgb);
+  --bs-light-rgb: 236, 236, 236;
   box-sizing: border-box;
   height: 100%;
   padding: 0;
   margin: 0;
-  background: fixed center url("/background.jpg");
-  background-size: cover;
-}
-body .navbar {
-  --bs-navbar-active-color: var(--nat-navbar-highlight-text);
-  --bs-navbar-brand-color: var(--nat-navbar-text-color);
-  --bs-navbar-brand-hover-color: var(--nat-navbar-highlight-text);
-  --bs-navbar-color: var(--nat-navbar-text-color);
-  --bs-navbar-hover-color: var(--nat-navbar-highlight-text);
-}
-.bg-dark a.dropdown-item {
-  color: var(--nat-navbar-bg);
 }
 .wrapper {
   box-sizing: border-box;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-:root {
-  --nat-navbar-bg: black;
-  --nat-navbar-bg-rgb: 236, 236, 236;
-  --nat-navbar-text-color: black;
-  --col-bg-color: rgb(236, 236, 236, 0.8);
-  --col-text-color: darkblue;
-}
-
-footer, footer a {
-  color: var(--nat-navbar-text-color);
-}
-
-.feature-col {
-  background-color: var(--col-bg-color);
-  color: var(--nat-navbar-text-color);
-  border-radius: 5%;
-  margin: 10px 10px;
-  padding: 10px 10px;
 }

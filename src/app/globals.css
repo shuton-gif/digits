@@ -19,6 +19,15 @@ body .navbar {
   --bs-navbar-hover-color: var(--nat-navbar-highlight-text);
 }
 
+/* Force all navbar links to be black */
+.navbar .nav-link {
+  color: var(--nat-navbar-text-color) !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(--nat-navbar-highlight-text) !important;
+}
+
 .bg-dark a.dropdown-item {
   color: var(--nat-navbar-text-color);
 }
@@ -34,6 +43,7 @@ body .navbar {
   --nat-navbar-bg: #ECECEC;
   --nat-navbar-bg-rgb: 236, 236, 236;
   --nat-navbar-text-color: black;
+  --nat-navbar-highlight-text: black;
 }
 
 footer, footer a {

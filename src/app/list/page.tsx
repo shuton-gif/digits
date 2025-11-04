@@ -1,12 +1,10 @@
 import { getServerSession } from 'next-auth';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Contact } from '@/lib/validationSchemas';
 // import { prisma } from '@/lib/prisma';
 // import StuffItem from '@/components/StuffItem';
 import ContactCard from '@/components/ContactCard';
 import { loggedInProtectedPage } from '@/lib/page-protection';
 import authOptions from '@/lib/authOptions';
-import { Contact } from '@/lib/validationSchemas';
 
 const contacts: Contact[] = [
   {

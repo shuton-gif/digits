@@ -1,7 +1,6 @@
 'use client';
 
 import { Card, Image } from 'react-bootstrap';
-import { Contact } from '@/lib/validationSchemas';
 
 /* Renders a single contact card. See list/page.tsx. */
 const ContactCard = ({ firstName, lastName, address, image, description }: Contact) => (

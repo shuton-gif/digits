@@ -6,6 +6,7 @@ import { Contact } from '@/lib/validationSchemas';
 import ContactCard from '@/components/ContactCard';
 import { loggedInProtectedPage } from '@/lib/page-protection';
 import authOptions from '@/lib/authOptions';
+import { Contact } from '@/lib/validationSchemas';
 
 const contacts: Contact[] = [
   {

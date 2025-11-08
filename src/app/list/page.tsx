@@ -20,6 +20,9 @@ const ListPage = async () => {
     where: {
       owner,
     },
+    include: {
+      notes: true,
+    },
   });
   return (
     <main>
@@ -30,7 +33,7 @@ const ListPage = async () => {
             <Row xs={1} md={2} lg={3} className="g-4">
               {contacts.map((contact) => (
                 <Col key={`Contact-${contact.firstName}`}>
-                  <ContactCard {...contact} />
+                  <ContactCard contact={contact} notes={contact.notes} />
                 </Col>
               ))}
             </Row>

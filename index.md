@@ -93,6 +93,8 @@ The application landing page welcomes users and provides navigation to sign in o
 
 Users can sign in with existing credentials or register for a new account. The authentication system uses NextAuth.js with secure password hashing.
 
+<img src="doc/signin.png">
+
 ### Contact Management
 
 Once logged in, users can:
@@ -102,15 +104,21 @@ Once logged in, users can:
 - Fill in contact details: first name, last name, address, image URL, and description
 - Form validation ensures all required fields are completed
 
+<img src="doc/addContact.png">
+
 #### List Contacts
 - View all contacts you've created in a organized list format
 - Each contact shows their image, name, and description
 - Quick access to edit or view detailed contact information
 
+<img src="doc/list.png">
+
 #### Edit Contacts
 - Modify existing contact information
 - Update any field including personal details and contact image
 - Changes are saved immediately to the database
+
+<img src="doc/edit.png">
 
 #### Contact Notes
 - Add timestamped notes to any contact
@@ -125,6 +133,8 @@ Users with admin privileges have additional capabilities:
 - View all contacts created by all users in the system
 - Comprehensive overview of the entire contact database
 - Administrative controls for system-wide contact management
+
+<img src="doc/adminlist.png">
 
 ## Database Schema
 
@@ -163,50 +173,3 @@ npm run lint
 ```
 
 The application follows Next.js and AirBnB JavaScript style guides with custom ESLint rules.
-
-### TypeScript
-Full TypeScript support provides type safety and better development experience.
-
-## Development
-
-### Directory Structure
-
-```
-src/
-├── app/
-│   ├── add/                    # Add contact page
-│   ├── admin/                  # Admin dashboard
-│   ├── auth/                   # Authentication pages
-│   ├── edit/[id]/             # Edit contact page
-│   ├── list/                   # Contact list page
-│   └── page.tsx               # Landing page
-├── components/
-│   ├── AddContactForm.tsx     # Form for adding contacts
-│   ├── EditContactForm.tsx    # Form for editing contacts
-│   ├── ContactCard.tsx        # Contact display component
-│   ├── AddNoteForm.tsx        # Form for adding notes
-│   ├── NoteItem.tsx           # Individual note display
-│   └── Navbar.tsx             # Navigation component
-└── lib/
-    ├── dbActions.ts           # Database operations
-    ├── validationSchemas.ts   # Form validation schemas
-    └── prisma.ts              # Database client
-```
-
-### Key Features Implementation
-
-- **Form Validation**: Yup schemas ensure data integrity
-- **Database Operations**: Server actions handle CRUD operations
-- **Authentication**: NextAuth.js provides secure user management
-- **Authorization**: Role-based access control for admin features
-- **Responsive Design**: Bootstrap components ensure mobile compatibility
-
-## Future Enhancements
-
-Potential areas for expansion:
-- Contact import/export functionality
-- Advanced search and filtering
-- Contact categorization and tagging
-- Email integration
-- Calendar integration for contact-related events
-- Mobile application version

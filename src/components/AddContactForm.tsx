@@ -11,7 +11,8 @@ import LoadingSpinner from '@/components/LoadingSpinner';
 import { AddContactSchema } from '@/lib/validationSchemas';
 
 const onSubmit = async (data: {
-  firstName: string; lastName: string; address: string; image: string; description: string; owner: string }) => {
+  firstName: string; lastName: string; address: string; image: string; description: string; owner: string
+}) => {
   // console.log(`onSubmit data: ${JSON.stringify(data, null, 2)}`);
   await addContact(data);
   swal('Success', 'Your contact has been added', 'success', {

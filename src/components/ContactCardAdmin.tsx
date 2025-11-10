@@ -3,8 +3,8 @@
 import { Card, Image } from 'react-bootstrap';
 import { Contact } from '@/lib/validationSchemas';
 
-/* Renders a single contact card. See list/page.tsx. */
-const ContactCard = ({ firstName, lastName, address, image, description }: Contact) => (
+/* Renders a single contact card for admin view. See admin/page.tsx. */
+const ContactCardAdmin = ({ firstName, lastName, address, image, description, owner }: Contact & { owner: string }) => (
   <Card className="h-100">
     <Card.Header>
       <Image src={image} width={75} style={{ paddingBottom: '10px' }} />
@@ -17,8 +17,9 @@ const ContactCard = ({ firstName, lastName, address, image, description }: Conta
     </Card.Header>
     <Card.Body>
       <Card.Text>{description}</Card.Text>
+      <p className="blockquote-footer">{owner}</p>
     </Card.Body>
   </Card>
 );
 
-export default ContactCard;
+export default ContactCardAdmin;

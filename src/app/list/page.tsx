@@ -21,25 +21,16 @@ const ListPage = async () => {
       owner,
     },
   });
-  const notes = await prisma.note.findMany({
-    where: {
-      owner,
-    },
-  });
-  // console.log(contacts);
   return (
     <main>
       <Container id="list" fluid className="py-3">
         <Row>
           <Col>
-            <h1 className="text-center">List Contacts</h1>
+            <h1 className="text-center">Contacts</h1>
             <Row xs={1} md={2} lg={3} className="g-4">
               {contacts.map((contact) => (
-                <Col key={contact.id}>
-                  <ContactCard
-                    contact={contact}
-                    notes={notes.filter(note => note.contactId === contact.id)}
-                  />
+                <Col key={`Contact-${contact.firstName}`}>
+                  <ContactCard {...contact} />
                 </Col>
               ))}
             </Row>

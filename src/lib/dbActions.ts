@@ -5,7 +5,6 @@ import { hash } from 'bcrypt';
 import { redirect } from 'next/navigation';
 import { prisma } from './prisma';
 
-
 /**
  * Creates a new user in the database.
  * @param credentials, an object with the following properties: email, password.

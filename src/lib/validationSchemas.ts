@@ -1,6 +1,5 @@
 import * as Yup from 'yup';
 
-
 export const AddContactSchema = Yup.object({
   firstName: Yup.string().required(),
   lastName: Yup.string().required(),
